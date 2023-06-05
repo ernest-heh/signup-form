@@ -1,7 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --lightgrey: rgb(158, 158, 158);
+  --medgrey: rgb(113, 113, 113);
+  --darkgrey: #222222;
+  --lightblue: rgb(229, 236, 245);
+  --medblue: rgb(48, 87, 145);
+  --blue: rgb(9, 74, 172);
+}
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--darkgrey);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.banner {
+  background: url(./assets/lena-polishko-O2LSUVg_OEY-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-column: span 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 1.3rem;
+}
+
+.banner-logo {
+  display: block;
+  width: 80%;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  color: white;
+  padding: 2rem 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 30%;
+}
+
+.banner-credits {
+  color: white;
+  text-align: center;
+  font-size: smaller;
+  font-weight: 400;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.banner-credits a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-wrapper {
+  grid-column: span 2;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 max(12%, 4rem);
+}
+
+.form-content h1 {
+  margin-bottom: 2rem;
+  letter-spacing: -0.05rem;
+  font-size: 2.2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+}
+
+label {
+  display: inline-block;
+  font-size: smaller;
+  color: var(--medblue);
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-family: inherit;
+  background-color: var(--lightblue);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  /* border-bottom: 1px solid var(--lightgrey); */
+}
+
+.form-input {
+  margin-top: 2rem;
+}
+
+.form-footer {
+  margin-top: 3rem;
+}
+
+.form-footer button {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  border-radius: 12px;
+  padding: 12px 48px;
+  transition: background 300ms;
+}
+
+.form-footer button:hover {
+  background-color: var(--medblue);
+  transition: background 300ms;
+  cursor: pointer;
+}
+
+.form-footer p {
+  color: var(--medgrey);
+  margin-top: 2rem;
+  font-size: smaller;
+  font-weight: 500;
+}
+
+.form-footer a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 700;
 }

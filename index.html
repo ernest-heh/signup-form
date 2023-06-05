@@ -5,8 +5,85 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Sign-up Form</h1>
+    <div class="container">
+      <div class="banner">
+        <div class="banner-logo">ODIN</div>
+        <div class="banner-credits">
+          <p>
+            Photo by
+            <a
+              href="https://unsplash.com/@ilon_a?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Lena Polishko</a
+            >
+            on
+            <a
+              href="https://unsplash.com/photos/O2LSUVg_OEY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Unsplash</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="form-wrapper">
+        <div class="form-content">
+          <h1>Create your account</h1>
+          <form action="" method="post">
+            <div class="form-grid">
+              <div class="form-input">
+                <label for="user-firstname">First Name</label>
+                <input
+                  type="text"
+                  id="user-firstname"
+                  name="firstname"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <label for="user-lastname">Last Name</label>
+                <input
+                  type="text"
+                  id="user-lastname"
+                  name="lastname"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <label for="user-email">Email</label>
+                <input type="email" id="user-email" name="email" required />
+              </div>
+              <div class="form-input">
+                <label for="user-phone">Phone</label>
+                <input type="tel" id="user-phone" name="phone" required />
+              </div>
+              <div class="form-input">
+                <label for="user-password">Password</label>
+                <input
+                  type="password"
+                  id="user-password"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="form-input">
+                <label for="user-password-confirm">Confirm Password</label>
+                <input
+                  type="password"
+                  id="user-password-confirm"
+                  name="password-confirm"
+                  required
+                />
+              </div>
+              <div class="form-footer">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
