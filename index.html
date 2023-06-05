@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Create your Account</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -29,55 +30,66 @@
 
       <div class="form-wrapper">
         <div class="form-content">
-          <h1>Create your account</h1>
-          <form action="" method="post">
+          <h1>Create your Account</h1>
+          <form action="#" method="post">
             <div class="form-grid">
               <div class="form-input">
                 <label for="user-firstname">First Name</label>
-                <input
-                  type="text"
-                  id="user-firstname"
-                  name="firstname"
-                  required
-                />
+                <input type="text" id="user-firstname" name="firstname" />
               </div>
               <div class="form-input">
                 <label for="user-lastname">Last Name</label>
+                <input type="text" id="user-lastname" name="lastname" />
+              </div>
+              <div class="form-input">
+                <label for="user-email">Email</label>
                 <input
-                  type="text"
-                  id="user-lastname"
-                  name="lastname"
+                  type="email"
+                  id="user-email"
+                  name="email"
+                  title="Must be a valid email address"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   required
                 />
               </div>
               <div class="form-input">
-                <label for="user-email">Email</label>
-                <input type="email" id="user-email" name="email" required />
-              </div>
-              <div class="form-input">
                 <label for="user-phone">Phone</label>
-                <input type="tel" id="user-phone" name="phone" required />
+                <input
+                  type="tel"
+                  id="user-phone"
+                  name="phone"
+                  title="Must be a valid phone number"
+                  required
+                />
               </div>
               <div class="form-input">
                 <label for="user-password">Password</label>
                 <input
+                  class="error"
                   type="password"
                   id="user-password"
                   name="password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  title="Password must be a minimum of 8 characters"
+                  value="Password123!"
                   required
                 />
+                <p class="input-hint">Must be at least 8 characters</p>
               </div>
               <div class="form-input">
                 <label for="user-password-confirm">Confirm Password</label>
                 <input
+                  class="error"
                   type="password"
                   id="user-password-confirm"
                   name="password-confirm"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                  title="Passwords must match"
                   required
                 />
               </div>
               <div class="form-footer">
-                <button type="submit">Create Account</button>
+                <button type="submit">Sign Up</button>
                 <p>Already have an account? <a href="#">Log in</a></p>
               </div>
             </div>

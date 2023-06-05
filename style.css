@@ -45,16 +45,19 @@ body {
 
 .banner-logo {
   display: block;
-  width: 80%;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 666;
   letter-spacing: 0.5rem;
   text-align: center;
   color: white;
-  padding: 2rem 0;
+  padding: 2rem 3rem;
   background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
   position: absolute;
   top: 30%;
+  cursor: default;
+  pointer-events: none;
 }
 
 .banner-credits {
@@ -115,6 +118,12 @@ input {
 
 .form-input {
   margin-top: 2rem;
+}
+
+.input-hint {
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+  color: var(--medgrey);
 }
 
 .form-footer {
