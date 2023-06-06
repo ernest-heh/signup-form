@@ -8,6 +8,8 @@
   --medblue: rgb(48, 87, 145);
   --blue: rgb(9, 74, 172);
   --medyellow: rgb(255, 224, 124);
+  --lightred: rgb(255, 169, 169);
+  --red: rgb(255, 92, 92);
 }
 
 *,
@@ -124,9 +126,16 @@ input:focus,
 input:focus-visible,
 input:focus-within {
   background-color: var(--medyellow);
-  outline: 2px solid var(--medyellow);
-  outline-offset: 2px;
+  /* outline: 2px solid var(--medyellow); */
+  /* outline-offset: 2px; */
+  outline: none;
 }
+
+/* input:focus:invalid {
+  background-color: var(--lightred);
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+} */
 
 button:focus,
 button:focus-visible,
