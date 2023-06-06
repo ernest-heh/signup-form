@@ -7,6 +7,7 @@
   --lightblue: rgb(229, 236, 245);
   --medblue: rgb(48, 87, 145);
   --blue: rgb(9, 74, 172);
+  --medyellow: rgb(255, 224, 124);
 }
 
 *,
@@ -100,9 +101,12 @@ body {
 
 label {
   display: inline-block;
-  font-size: smaller;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
   color: var(--medblue);
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 input {
@@ -114,6 +118,21 @@ input {
   border: 1px solid transparent;
   border-radius: 4px;
   /* border-bottom: 1px solid var(--lightgrey); */
+}
+
+input:focus,
+input:focus-visible,
+input:focus-within {
+  background-color: var(--medyellow);
+  outline: 2px solid var(--medyellow);
+  outline-offset: 2px;
+}
+
+button:focus,
+button:focus-visible,
+button:focus-within {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }
 
 .form-input {
